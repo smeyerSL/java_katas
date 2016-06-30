@@ -1,4 +1,4 @@
-package com.smeyerSL.source.fizzbuzz;
+package com.smeyerSL.source.main.fizzbuzz;
 
 public class FizzBuzz {
 

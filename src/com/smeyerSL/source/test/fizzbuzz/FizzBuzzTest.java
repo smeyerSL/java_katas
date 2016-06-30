@@ -1,11 +1,11 @@
-package com.smeyerSL.test.fizzbuzz;
+package com.smeyerSL.source.test.fizzbuzz;
 
 import static org.junit.Assert.assertEquals;
 
 import org.junit.Before;
 import org.junit.Test;
 
-import com.smeyerSL.source.fizzbuzz.FizzBuzz;
+import com.smeyerSL.source.main.fizzbuzz.FizzBuzz;
 
 public class FizzBuzzTest {
 
