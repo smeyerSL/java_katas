@@ -27,12 +27,11 @@ public class RussianPeasantMultiplicationTest {
         assertTrue(4650L == this.russianPeasantMultiplication.multiply(75L, 62L));
     }
 
+    @Test
     public void multiplyWithZeroTest() {
-        //TODO
-    }
-
-    public void multiplyWithNegativeValuesTest() {
-        //TODO
+        assertTrue(0L == this.russianPeasantMultiplication.multiply(0L, 2521L));
+        assertTrue(0 == this.russianPeasantMultiplication.multiply(2521L, 0L));
+        assertTrue(0 == this.russianPeasantMultiplication.multiply(0L, 0L));
     }
 
     @Test
@@ -57,12 +56,33 @@ public class RussianPeasantMultiplicationTest {
         assertEquals(expectedMap, actualMap);
     }
 
-    public void generateNumbersMapForNegativeValuesTest() {
-        //TODO
-    }
-
+    @Test
     public void generateNumbersMapWithZeroTest() {
-        //TODO
+        Map<Long, Long> actualMap = this.russianPeasantMultiplication.generateNumbersMap(0L, 2521L);
+        Map<Long, Long> expectedMap = new HashMap<>();
+        expectedMap.put(0L, 2521L);
+        assertEquals(expectedMap, actualMap);
+
+        actualMap = this.russianPeasantMultiplication.generateNumbersMap(2521L, 0L);
+        expectedMap = new HashMap<>();
+        expectedMap.put(2521L, 0L);
+        expectedMap.put(1260L, 0L);
+        expectedMap.put(630L, 0L);
+        expectedMap.put(315L, 0L);
+        expectedMap.put(157L, 0L);
+        expectedMap.put(78L, 0L);
+        expectedMap.put(39L, 0L);
+        expectedMap.put(19L, 0L);
+        expectedMap.put(9L, 0L);
+        expectedMap.put(4L, 0L);
+        expectedMap.put(2L, 0L);
+        expectedMap.put(1L, 0L);
+        assertEquals(expectedMap, actualMap);
+
+        actualMap = this.russianPeasantMultiplication.generateNumbersMap(0L, 0L);
+        expectedMap = new HashMap<>();
+        expectedMap.put(0L, 0L);
+        assertEquals(expectedMap, actualMap);
     }
 
     @Test

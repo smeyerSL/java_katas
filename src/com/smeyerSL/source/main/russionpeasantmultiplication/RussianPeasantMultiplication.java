@@ -11,6 +11,9 @@ public class RussianPeasantMultiplication {
     }
 
     public Long multiply(Long x, Long y) {
+        if (x < 0 || y < 0) {
+            throw new IllegalArgumentException("Russian peasant multiplication only applies to natural numbers");
+        }
         Map<Long, Long> numbersMap = generateNumbersMap(x, y);
         return foldNumbersMap(numbersMap);
     }
